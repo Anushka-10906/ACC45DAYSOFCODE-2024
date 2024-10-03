@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T); // Read the number of test cases
+
+    while (T--) {
+        int X, Y;
+        scanf("%d %d", &X, &Y); // Read the time required for problems A and B
+
+        // Calculate total points for A then B
+        int points_A_first = (500 - 2 * X) + (1000 - 4 * (X + Y));
+        
+        // Calculate total points for B then A
+        int points_B_first = (1000 - 4 * Y) + (500 - 2 * (X + Y));
+        
+        // Find the maximum points from both strategies
+        int max_points = points_A_first > points_B_first ? points_A_first : points_B_first;
+
+        printf("%d\n", max_points); // Output the maximum points
+    }
+
+    return 0;
+}
