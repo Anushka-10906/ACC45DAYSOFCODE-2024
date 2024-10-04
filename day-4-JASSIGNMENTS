@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int T, X;
+    
+    // Read the number of test cases
+    scanf("%d", &T);
+    
+    while (T--) {
+        // Read the starting time for each test case
+        scanf("%d", &X);
+        
+        // Check if Janmansh can complete all assignments by 10 PM
+        if (X <= 7) {
+            printf("Yes\n");
+        } else {
+            printf("No\n");
+        }
+    }
+    
+    return 0;
+}
+
