@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T); // Read number of test cases
+
+    while (T--) {
+        int P, Q, R, S;
+        scanf("%d %d %d %d", &P, &Q, &R, &S); // Read profits for each company
+
+        // Calculate sums for monopoly condition
+        if (P > Q + R + S || Q > P + R + S || R > P + Q + S || S > P + Q + R) {
+            printf("YES\n"); // There's a monopoly
+        } else {
+            printf("NO\n"); // No monopoly
+        }
+    }
+
+    return 0;
+}
