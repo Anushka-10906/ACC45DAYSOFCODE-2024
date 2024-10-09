@@ -1,0 +1,23 @@
+
+
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);  // Read the number of test cases
+
+    for (int i = 0; i < T; i++) {
+        int N, X;
+        scanf("%d %d", &N, &X);  // Read N (total cards) and X (face-up cards)
+
+        // Calculate the number of face-down cards
+        int Y = N - X;
+
+        // The minimum number of flips needed
+        int min_flips = X < Y ? X : Y;
+
+        printf("%d\n", min_flips);  // Output the result for the test case
+    }
+
+    return 0;
+}
