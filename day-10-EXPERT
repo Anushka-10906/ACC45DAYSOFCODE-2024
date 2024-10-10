@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+    
+    while (T--) {
+        int X, Y; // X: submitted problems, Y: approved problems
+        scanf("%d %d", &X, &Y);
+        
+        // Check if at least 50% of problems are approved
+        if (Y * 2 >= X) {
+            printf("YES\n");
+        } else {
+            printf("NO\n");
+        }
+    }
+    
+    return 0;
+}
